@@ -1,0 +1,52 @@
+<table border="1">
+
+    <tr>
+        <td>GRid</td>
+        <td>Name</td>
+        <td>Email</td>
+        <td>Phone</td>
+    </tr>
+
+    <tbody id="record">
+
+    </tbody>
+
+</table>
+
+
+<script type="text/javascript">
+    let tbl = "";
+
+    class Data {
+        constructor(id, name, email, phone) {
+            this.id = id;
+            this.name = name;
+            this.email = email;
+            this.phone = phone;
+        }
+        getRecord() {
+            tbl += `
+                        <tr>
+                            <td>${this.id}</td>        
+                            <td>${this.name}</td>        
+                            <td>${this.email}</td>        
+                            <td>${this.phone}</td>        
+                        </tr>
+                    `
+            document.getElementById('record').innerHTML=tbl;        
+        }
+    }
+
+    let rec1 = new Data("111","yash","yash@gmail.com","12345");
+    let rec2 = new Data("222","kishan","kishan@gmail.com","98765");
+    let rec3 = new Data("333","harsh","harsh@gmail.com","34589");
+    let rec4 = new Data("444","vivek","vivek@gmail.com","908775");
+
+
+    rec1.getRecord();
+    rec2.getRecord();
+    rec3.getRecord();
+    rec4.getRecord();
+
+
+</script>

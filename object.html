@@ -1,0 +1,64 @@
+<table border = "1">
+
+    <tr>
+        <td>Name</td>
+        <td>Email</td>
+        <td>Phone</td>
+    </tr>
+
+    <tbody id="record">
+    
+    </tbody>
+</table>
+
+
+ <script type="text/javascript">
+
+    let data = [
+
+    {
+        name : "kishan",
+        email : "kishan09@gmail.com",
+        phone : "987655554"
+    },
+    {
+        name : "vivek",
+        email : "vivek03@gmail.com",
+        phone : "928374652"
+    },
+    {
+        name : "hardik",
+        email : "hardik87@gmail.com",
+        phone : "348898667"
+    },
+    {
+        name : "rahul",
+        email : "rahul70@gmail.com",
+        phone : "678765434"
+    }
+
+    ]
+
+    console.log(data);
+
+    let tbl = "";
+
+    data.map((val)=>{
+        tbl += `
+            <tr>
+                <td>${val.name}</td>    
+                <td>${val.email}</td>    
+                <td>${val.phone}</td>    
+            </tr>
+        `
+    })
+    document.getElementById('record').innerHTML = tbl;
+
+</script>
+
+
+<script type="text/javascript">
+
+         
+
+</script>

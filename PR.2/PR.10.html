@@ -1,0 +1,31 @@
+<script type="text/javascript">
+
+    var a = parseFloat(prompt("Enter the number A :"));
+    var b = parseFloat(prompt("Enter the number B :"));
+
+    var choice = (prompt("Select your choice :"));
+
+    var create;
+
+    switch (choice) {
+
+        case "+":
+            create = a + b;
+            break;
+
+        case "-":
+            create = a - b;
+            break;
+
+        case "*":
+            create = a * b;
+            break;
+
+        case "/":
+            create = a / b;
+            break;
+    }
+
+    document.write("<h1>"+create+"</h1>");
+    
+</script>

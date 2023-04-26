@@ -1,0 +1,89 @@
+<script type="text/javascript">
+
+    function number(){
+        var a = parseInt(prompt("Enter Number A : "));
+        var b = parseInt(prompt("Enter Number B : "));
+        var temp;
+
+        temp = a;
+        a = b;
+        b =temp;
+        
+        document.write("<h1>A = "+a+"</h1>");
+        document.write("<h1>B = "+b+"</h1>");
+    }
+    number();
+
+</script>
+
+
+
+<!-- <script type="text/javascript">
+
+    function number(x,y){
+        var temp;
+
+        temp = x;
+        x = y;
+        y =temp;
+        
+        document.write("<h1>A = "+x+"</h1>");
+        document.write("<h1>B = "+y+"</h1>");
+    }
+    var a = parseInt(prompt("Enter Number A : "));
+    var b = parseInt(prompt("Enter Number B : "));
+    number(a,b);
+
+</script> -->
+
+
+
+<!-- <script type="text/javascript">
+
+    function number(){
+
+        var a = parseInt(prompt("Enter Number A : "));
+        var b = parseInt(prompt("Enter Number B : "));
+        var temp;
+
+        temp = a;
+        a = b;
+        b = temp;
+
+        return {
+            'x' : a,
+            'y' : b,
+        }
+    }
+    var ans = number();
+    document.write("<h1>A = "+ans.x+"</h1>");
+    document.write("<h1>B = "+ans.y+"</h1>");
+
+</script>  -->
+
+
+
+<!-- <script type="text/javascript">
+
+    function number(a,b){
+
+        var temp;
+        
+        temp = a;
+        a = b;
+        b = temp;
+        
+        return {
+            'x' : a,
+            'y' : b,
+        }
+    }
+    var a = parseInt(prompt("Enter Number A : "));
+    var b = parseInt(prompt("Enter Number B : "));
+
+    var ans = number(a,b);
+
+    document.write("<h1>A = "+ans.x+"</h1>");
+    document.write("<h1>B = "+ans.y+"</h1>");
+
+</script> -->

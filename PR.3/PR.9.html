@@ -1,0 +1,129 @@
+<!-- simple function -->
+
+<script type="text/javascript">
+    function number() {
+        let a = parseInt(prompt("Enter value of A :"));
+        let b = parseInt(prompt("Enter value of B :"));
+        let c = parseInt(prompt("Enter value of C :"));
+
+        if (a > b) {
+            if (a > c) {
+                document.write("<h2>A is big</h2>");
+            }
+            else {
+                document.write("<h2>C is big</h2>");
+            }
+        }
+        else {
+            if (b > c) {
+                document.write("<h2>B is big</h2>");
+            }
+            else {
+                document.write("<h2>C is big</h2>");
+            }
+        }
+    }
+    number();
+</script>
+
+<!-- no return with perameter -->
+
+<!-- <script type="text/javascript">
+    function number(a, b, c) {
+        if (a > b) {
+            if (a > c) {
+                document.write("<h2>A is big</h2>");
+            }
+            else {
+                document.write("<h2>C is big</h2>");
+            }
+        }
+        else {
+            if (b > c) {
+                document.write("<h2>B is big</h2>");
+            }
+            else {
+                document.write("<h2>C is big</h2>");
+            }
+        }
+    }
+    let a=parseInt(prompt("Enter value of A :"));
+    let b=parseInt(prompt("Enter value of B :"));
+    let c=parseInt(prompt("Enter value of c :"));
+    number(a,b,c);
+</script> -->
+
+<!-- return with no perameter -->
+
+<!-- <script type="text/javascript">
+    function number() {
+        let a = parseInt(prompt("Enter value of A :"));
+        let b = parseInt(prompt("Enter value of B :"));
+        let c = parseInt(prompt("Enter value of c :"));
+
+        if (a > b) {
+            if (a > c) {
+                return 1;
+            }
+            else {
+                return 3;
+            }
+        }
+        else {
+            if (b > c) {
+                return 2;
+            }
+            else {
+                return 3;
+            }
+        }
+    }
+    var ans = number();
+    document.write("<h2>Ans is :" + ans + "</h2>");
+    if (ans == 1) {
+        document.write("<h2>A is big</h2>");
+    }
+    else if (ans == 2) {
+        document.write("<h2>B is big</h2>");
+    }
+    else {
+        document.write("<h2>C is big</h2>");
+    }
+</script> -->
+
+<!-- return with perameter -->
+
+<!-- <script type="text/javascript">
+    function number(a, b, c) {
+        if (a > b) {
+            if (a > c) {
+                return 1;
+            }
+            else {
+                return 3;
+            }
+        }
+        else {
+            if (b > c) {
+                return 2;
+            }
+            else {
+                return 3;
+            }
+        }
+    }
+    let a = parseInt(prompt("Enter value of A :"));
+    let b = parseInt(prompt("Enter value of B :"));
+    let c = parseInt(prompt("Enter value of C :"));
+    let ans = number(a, b, c);
+    document.write("<h2>Ans is :" + ans + "</h2>");
+    if (ans == 1) {
+        document.write("<h2>A is big</h2>");
+    }
+    else if (ans == 2) {
+        document.write("<h2>B is big</h2>");
+    }
+    else {
+        document.write("<h2>C is big</h2>");
+    }
+</script> -->

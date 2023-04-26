@@ -1,0 +1,93 @@
+<!-- <table border="1">
+    <tr>
+        <td>GR id</td>
+        <td>Name</td>
+        <td>Email</td>
+        <td>Phone</td>
+    </tr>
+    <tbody id="record">
+        
+    </tbody>
+</table>
+
+<script type="text/javascript">
+
+    var data1 = [1301,"Darshit","darshit123@gmail.com",99055];
+    var data2 = [1311,"Raj","raj123@gmail.com",88066];
+    var data3 = [1321,"Vinay","vinay123@gmail.com",77055];
+    var data4 = [1331,"Utsav","utsav123@gmail.com",66044];
+
+    var alldata = [data1,data2,data3,data3];
+
+    var tbl = "";
+
+    for(i=0; i<alldata.length; i++){
+        tbl+=
+        `
+            <tr>
+                <td>${alldata[i][0]}</td>
+                <td>${alldata[i][1]}</td>
+                <td>${alldata[i][2]}</td>
+                <td>${alldata[i][3]}</td>
+            </tr>
+        `
+    }
+    document.getElementById("record").innerHTML = tbl;
+
+</script> -->
+
+
+
+<table border="1">
+    <tr>
+        <td>Gr id</td>
+        <td>Name</td>
+        <td>Email</td>
+        <td>Phone</td>
+    </tr>
+    <tbody id="record">
+
+    </tbody>
+</table>
+
+<script type="text/javascript">
+
+    var data1 = [1111, "Vraj", "vraj01@gmail.com", 97778];
+    var data2 = [2222, "Sumit", "sumit02@gmail.com", 96668];
+    var data3 = [3333, "Vijay", "vijay03@gmail.com", 95558];
+    var data4 = [4444, "Kishan", "kishan04@gmail.com", 94448];
+
+    var alldata = [data1, data2, data3, data4];
+
+    var a = prompt("Enter Data : ")
+
+    var tbl = "";
+
+    for (i = 0; i < alldata.length; i++) {
+        if (a == alldata[i][0]) {
+            tbl +=
+                `
+            <tr>
+                <td>${alldata[i][0]}</td>
+                <td>${alldata[i][1]}</td>
+                <td>${alldata[i][2]}</td>
+                <td>${alldata[i][3]}</td>
+            </tr>
+        `
+        }
+        else if (a == alldata[i][1]) {
+            tbl +=
+                `
+            <tr>
+                <td>${alldata[i][0]}</td>
+                <td>${alldata[i][1]}</td>
+                <td>${alldata[i][2]}</td>
+                <td>${alldata[i][3]}</td>
+            </tr>
+        `
+        }
+    }
+
+    document.getElementById("record").innerHTML = tbl;
+
+</script>

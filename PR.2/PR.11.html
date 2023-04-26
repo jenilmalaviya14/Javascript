@@ -1,0 +1,30 @@
+<script type="text/javascript">
+
+    var a=parseFloat(prompt("Enter number of A :"));
+    var b=parseFloat(prompt("Enter number of B :"));
+
+    var choice=prompt("Enter your choise :");
+    var Ans;
+
+    if(choice == "+"){
+        Ans = a + b;
+    }
+    else if(choice == "-"){
+        Ans = a - b;
+    }
+    else if(choice == "*"){
+        Ans = a * b;
+    }
+    else if(choice == "%"){
+        Ans = a % b;
+    }
+    else if(choice == "/"){
+        Ans = a / b;
+    }
+    else{
+        console.log("Invalid value");
+    }
+
+    document.write("<h1>"+Ans+"</h1>");
+
+</script>

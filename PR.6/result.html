@@ -1,0 +1,40 @@
+<script type="text/javascript">
+
+    class Result {
+
+        result() {
+            let a = parseInt(prompt("Enter the marks of Phyysics :-"));
+            let b = parseInt(prompt("Enter the marks of chemistry :-"));
+            let c = parseInt(prompt("Enter the marks of Biology :-"));
+            let d = parseInt(prompt("Enter the marks of Mathematics :-"));
+            let e = parseInt(prompt("Enter the marks of Computer :-"));
+            const sum = a + b + c + d + e;
+            const avg = sum / 500 * 100;
+
+            document.write("Your Total is :-" + sum);
+
+            if (avg >= 90) {
+                document.write("Your Grade is :- A");
+            }
+            else if (avg >= 80) {
+                document.write("Your Grade is :- B");
+            }
+            else if (avg >= 70) {
+                document.write("Your Grade is :- C");
+            }
+            else if (avg >= 60) {
+                document.write("Your Grade is :- D");
+            }
+            else if (avg >= 50) {
+                document.write("Your Grade is :- E");
+            }
+            else {
+                document.write("Your Grade is :- F");
+            }
+        }
+    }
+
+    let ans = new Result;
+    ans.result();
+
+</script>

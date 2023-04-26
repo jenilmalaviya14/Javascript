@@ -1,0 +1,14 @@
+<script type="text/javascript">
+    
+    function name(no,factorial) {
+        for (var i = 1; i <= no; i++) {
+            
+            document.write("<h2>"+i+"</h2>");
+            factorial *= i;
+        }
+        document.write("<h1>Ans = "+factorial+"</h1>");
+    }
+    var no = parseInt(prompt("Enter the number :"));
+    var factorial = 1;
+    name(no,factorial);
+</script>
