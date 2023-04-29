@@ -1,0 +1,336 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+<div class="container">
+    <div class="row pt-5 pb-5 justify-content-between">
+        <div class="col-md-2">
+            <button onclick="viewAllRecord()" class="btn btn-info px-4">All</button>
+        </div>
+        <div class="col-md-2">
+            <button onclick="viewsamsungData()" class="btn btn-info">Samsung</button>
+        </div>
+        <div class="col-md-2">
+            <button onclick="viewiphoneData()" class="btn btn-info">iPhone</button>
+        </div>
+        <div class="col-md-2">
+            <button onclick="viewoppodata()" class="btn btn-info">Oppo</button>
+        </div>
+        <div class="col-md-2">
+            <button onclick="viewoneplus()" class="btn btn-info">Oneplus</button>
+        </div>
+    </div>
+    <div class="row" id="allrecord">
+
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+    let data = [
+        {
+            name: "iphone",
+            Image: "https://i.pinimg.com/564x/34/84/86/348486f8782a2482ecb15bebb3ed4249.jpg",
+            model: "Apple iPhone XR",
+            Price: "₹41,699.00",
+            Details: "The iPhone XR has arrived to stun our senses with a host of features such as the Liquid Retina Display, a faster Face ID."
+        },
+        {
+            name: "iphone",
+            Image: "https://i.pinimg.com/564x/cd/06/97/cd06976bd0c05664a4beacaf86a837ec.jpg",
+            model: "APPLE iPhone XS Max",
+            Price: "₹42,500.00",
+            Details: "If you've been searching for a smartphone that performance and timeless beauty, then meet the iPhone Xs Max."
+        },
+        {
+            name: "iphone",
+            Image: "https://i.pinimg.com/564x/fd/72/b6/fd72b690966d3d9b8ed32e27c33edd18.jpg",
+            model: "APPLE iPhone 11",
+            Price: "₹44,999.00",
+            Details: "The iPhone 11 boasts a gorgeous all-screen Liquid Retina LCD that is water resistant up to 2 metres for up to 30 minutes."
+        },
+        {
+            name: "iphone",
+            Image: "https://i.pinimg.com/564x/e2/34/e2/e234e2ce35219eef60fac04aec237741.jpg",
+            model: "APPLE iPhone 11 Pro max",
+            Price: "₹95,699.00",
+            Details: "Four new textured matt glass finishes and stainless-steel design. Featuring a 16.51cm (6.5) Super Retina XDR display."
+        },
+        {
+            name: "iphone",
+            Image: "https://i.pinimg.com/564x/72/09/16/7209162790fc8e45afd1bd3625272a11.jpg",
+            model: "APPLE iPhone 12 Pro max",
+            Price: "₹99,599.00",
+            Details: "Epic night shots that beg to be shared Ultra-fast photography and gameplay Designed for you, and the planet"
+        },
+        {
+            name: "iphone",
+            Image: "https://i.pinimg.com/564x/a4/cf/db/a4cfdb1d7745e89403bcaa19f14f0b94.jpg",
+            model: "APPLE iPhone 14",
+            Price: "₹ 71,999.00",
+            Details: "Epic night shots that beg to be shared Ultra-fast photography and gameplay Designed for you, and the planet"
+        },
+        {
+            name: "iphone",
+            Image: "https://i.pinimg.com/564x/3d/4e/6c/3d4e6cd7baa3be6725d244557b0033f0.jpg",
+            model: "APPLE iPhone 13 Pro Max",
+            Price: "₹ 1,27,999.00",
+            Details: "iPhone 13. boasts an advanced dual-camera system that allows you to click mesmerising pictures with immaculate clarity. "
+        },
+        {
+            name: "iphone",
+            Image: "https://i.pinimg.com/564x/63/f7/f0/63f7f001d2bfeb2d79c85592e0188909.jpg",
+            model: "APPLE iPhone 14 Pro Max",
+            Price: "₹ 1,34,999.00",
+            Details: "512 GB ROM 17.02 cm (6.7 inch) Super Retina XDR Display 48MP + 12MP + 12MP | 12MP Front Camera A16 Bionic Chip, 6 Core Processor Processor"
+        },
+        {
+            name: "samsung",
+            Image: "https://i.pinimg.com/564x/1e/d2/6c/1ed26c15876439c30d3b8392b8314231.jpg",
+            model: "Galaxy S20 FE 5G",
+            Price: "₹36,999.00",
+            Details: "Flagship Camera with 30x Space Zoom and Bright Night SuperAMOLED 2X display with 120Hz refresh rate 4500mAh battery with 25W superfast charging"
+        },
+        {
+            name: "samsung",
+            Image: "https://i.pinimg.com/564x/f4/dd/8f/f4dd8fcde163f8e84a27b9162bad7308.jpg",
+            model: "Galaxy S21 FE 5G",
+            Price: "₹54,999.00",
+            Details: "Our smoothest scrolling screen with Super Smooth 120 Hz 32MP front camera with Night mode at night Our fastest chip now on S21 FE"
+        },
+        {
+            name: "samsung",
+            Image: "https://i.pinimg.com/564x/97/97/f6/9797f64f01daf7c0fdda07139e956c1e.jpg",
+            model: "Galaxy S22",
+            Price: "₹52,999.00",
+            Details: "The biggest leap in our video technology The first 4nm processor on Samsung Galaxy The battery that lasts beyond 24 hours, even on 5G"
+        },
+        {
+            name: "samsung",
+            Image: "https://i.pinimg.com/564x/cb/00/73/cb00738f1010dfd42e53b7a1095a367f.jpg",
+            model: "Galaxy S22 Ultra",
+            Price: "₹1,09,999.00",
+            Details: "The biggest leap in our video technology The first 4nm processor on Samsung Galaxy The first Galaxy S with built-in S Pen"
+        },
+        {
+            name: "samsung",
+            Image: "https://i.pinimg.com/564x/61/f6/69/61f669bbf0a03c05a2569395a80c1ffb.jpg",
+            model: "Galaxy S23+",
+            Price: "₹1,04,999.00",
+            Details: "Snap your best night selfies yet Epically fast photography and gameplay Designed for you, and the planet"
+        },
+        {
+            name: "samsung",
+            Image: "https://i.pinimg.com/564x/9c/a9/13/9ca9137c06457a955868feaeec71b62e.jpg",
+            model: "Galaxy S23 Ultra",
+            Price: "₹1,24,999.00",
+            Details: "Epic night shots that beg to be shared Ultra-fast photography and gameplay Designed for you, and the planet"
+        },
+        {
+            name: "oppo",
+            Image: "https://i.pinimg.com/564x/09/cc/79/09cc79e2a1df41a4b9023cdd137ba6a4.jpg",
+            model: "Oppo Find N2 Flip",
+            Price: "₹89,999.00", 
+            Details: "Treat yourself to a fantastic smartphone that is packed with amazing features and helps you get things done without sacrificing entertainment value."
+        },
+        {
+            name: "oppo",
+            Image: "https://i.pinimg.com/564x/0b/b2/1c/0bb21c005d22e813984b069745349ffa.jpg",
+            model: "OPPO Reno 8 Pro ",
+            Price: "₹45,999.00",
+            Details: "Say goodbye to disappointing photos and poor visuals, as you bring home the feature-packed Oppo Reno 8 Pro mobile phone. It comes with an innovative."
+        },
+        {
+            name: "oppo",
+            Image: "https://i.pinimg.com/564x/cf/4c/f6/cf4cf6f7877290468ce978451410c117.jpg",
+            model: "OPPO Reno 7 Pro",
+            Price: "₹34,999.00",
+            Details: "OPPO Reno7 Pro, which is built for photographers, brings out your creative side. You can take photographs and preserve memories without worrying."
+        },
+        {
+            name: "oppo",
+            Image: "https://cdn.shopify.com/s/files/1/0245/9382/5867/products/71otei-O3-L._SL1500_500x.jpg?v=1647764505",
+            model: "OPPO Reno 6 Pro",
+            Price: "₹35,999.00",
+            Details: "The OPPO Reno6 Pro 5G is not only easy on the eyes but also equipped with innovative features. The X-axis Linear Motor ensures immersive viewing and usage. "
+        },
+        {
+            name: "oppo",
+            Image: "https://i.pinimg.com/564x/6d/e1/24/6de124cc2a975f0ba7a85b6c535ba22c.jpg",
+            model: "OPPO F21 Pro",
+            Price: "₹21,999.00",
+            Details: "Packed with a plethora of exciting camera and utility features, the Oppo F21 Pro smartphone keeps you entertained throughout the day. "
+        },
+        {
+            name: "oneplus",
+            Image: "https://i.pinimg.com/736x/82/04/12/8204127a01d7d69b8de617b09f0fc379.jpg",
+            model: "Oneplus 11R",
+            Price: "₹56,999.00",
+            Details: "8 GB RAM | 128 GB ROM 17.02 cm (6.7 inch) Display 50MP Rear Camera 5000 mAh Battery. "
+        },
+        {
+            name: "oneplus",
+            Image: "https://i.pinimg.com/564x/7e/21/26/7e2126558155b69a9afb6bae3255acab.jpg",
+            model: "Oneplus 10 Pro",
+            Price: "₹54,999.00",
+            Details: "8 GB RAM | 128 GB ROM 17.02 cm (6.7 inch) Display 50MP Rear Camera 5000 mAh Battery. "
+        },
+        {
+            name: "oneplus",
+            Image: "https://i.pinimg.com/564x/9b/8e/fc/9b8efc861990d3edfcfaaf74199e01fb.jpg",
+            model: "Oneplus nord 2T",
+            Price: "₹28,999.00",
+            Details: "Combining powerful performance experience, the OnePlus Nord 2T 5G Smartphone is a must-have. It boasts up to 16.33 cm (6.43) AMOLED display."
+        },
+        {
+            name: "oneplus",
+            Image: "https://i.pinimg.com/564x/9a/5b/bb/9a5bbb98d93371d57440893fc006dcae.jpg",
+            model: "Oneplus 9",
+            Price: "₹32,199.00",
+            Details: "8 GB RAM | 128 GB ROM 17.02 cm (6.7 inch) Display 50MP Rear Camera 5000 mAh Battery."
+        },
+        {
+            name: "oneplus",
+            Image: "https://i.pinimg.com/564x/bd/80/97/bd809717992ccaf0eb10d3b9981be4c4.jpg",
+            model: "Oneplus nord CE2 Lite",
+            Price: "₹20,999.00",
+            Details: "8 GB RAM | 128 GB ROM 17.02 cm (6.7 inch) Display 50MP Rear Camera 5000 mAh Battery."
+        },
+    ];
+
+    viewAllRecord();
+    function viewAllRecord() {
+
+        let tbl = "";
+        data.map((val) => {
+            tbl += `
+                    <div class="col-md-4 pb-4">
+                        <div class="card">
+                            <img src="${val.Image}" style=;"object-fit:cover" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">${val.model}</h5>
+                            <h2 class="card-text">${val.Price}</h2>
+                            <p class="card-text">${val.Details}</p>
+                            <a href="#" class="btn btn-primary">Order</a>
+                            </div>
+                        </div>
+                    </div>
+                    `
+        })
+
+        document.getElementById('allrecord').innerHTML = tbl;
+    }
+
+   function viewsamsungData(){
+    let name = "samsung";
+    let tbl = "";
+
+    data.map((val) => {
+
+        if(val.name == name){
+         
+            tbl += `
+                    <div class="col-md-4 pb-4">
+                        <div class="card">
+                            <img src="${val.Image}" style=;"object-fit:cover" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">${val.model}</h5>
+                            <h2 class="card-text">${val.Price}</h2>
+                            <p class="card-text">${val.Details}</p>
+                            <a href="#" class="btn btn-primary">Order</a>
+                            </div>
+                        </div>
+                    </div>
+                    `
+        }
+    })
+    document.getElementById('allrecord').innerHTML = tbl;
+
+   }
+
+
+   function viewiphoneData(){
+    let name = "iphone";
+    let tbl = "";
+
+    data.map((val) => {
+
+        if(val.name == name){
+         
+            tbl += `
+                    <div class="col-md-4 pb-4">
+                        <div class="card">
+                            <img src="${val.Image}" style=;"object-fit:cover" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">${val.model}</h5>
+                            <h2 class="card-text">${val.Price}</h2>
+                            <p class="card-text">${val.Details}</p>
+                            <a href="#" class="btn btn-primary">Order</a>
+                            </div>
+                        </div>
+                    </div>
+                    `
+        }
+    })
+    document.getElementById('allrecord').innerHTML = tbl;
+
+   }
+
+
+   function viewoppodata(){
+    let name = "oppo";
+    let tbl = "";
+
+    data.map((val) => {
+
+        if(val.name == name){
+         
+            tbl += `
+                    <div class="col-md-4 pb-4">
+                        <div class="card">
+                            <img src="${val.Image}" style=;"object-fit:cover" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">${val.model}</h5>
+                            <h2 class="card-text">${val.Price}</h2>
+                            <p class="card-text">${val.Details}</p>
+                            <a href="#" class="btn btn-primary">Order</a>
+                            </div>
+                        </div>
+                    </div>
+                    `
+        }
+    })
+    document.getElementById('allrecord').innerHTML = tbl;
+
+   }
+
+
+   function viewoneplus(){
+    let name = "oneplus";
+    let tbl = "";
+
+    data.map((val) => {
+
+        if(val.name == name){
+         
+            tbl += `
+                    <div class="col-md-4 pb-4">
+                        <div class="card">
+                            <img src="${val.Image}" style=;"object-fit:cover" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">${val.model}</h5>
+                            <h2 class="card-text">${val.Price}</h2>
+                            <p class="card-text">${val.Details}</p>
+                            <a href="#" class="btn btn-primary">Order</a>
+                            </div>
+                        </div>
+                    </div>
+                    `
+        }
+    })
+    document.getElementById('allrecord').innerHTML = tbl;
+
+   }
+
+
+</script>
