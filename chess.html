@@ -1,0 +1,64 @@
+<style>
+    .a1 {
+        
+        background-color: black;
+        height: 100px;
+        width: 100px;
+    }
+
+    .a2 {
+        background-color: white;
+        height: 100px;
+        width: 100px;
+    }
+</style>
+
+<table id="root" border="1">
+
+</table>
+
+
+<script type="text/javascript">
+
+    let root = document.getElementById('root');
+
+    for (let i = 1; i <= 8; i++) {
+        let tr = document.createElement('tr');
+
+        if (i % 2 == 1) {
+            for (let j = 1; j <= 8; j++) {
+                if (j % 2 == 1) {
+                    let td = document.createElement('td');
+                    td.setAttribute('class', 'a2')
+                    tr.appendChild(td);
+                }
+                else {
+                    let td = document.createElement('td');
+                    td.setAttribute('class', 'a1')
+                    tr.appendChild(td);
+                }
+
+            }
+        }
+        else {
+            for (let j = 1; j <= 8; j++) {
+                if (j % 2 == 0) {
+                    let td = document.createElement('td');
+                    td.setAttribute('class', 'a2')
+                    tr.appendChild(td);
+                }
+                else {
+                    let td = document.createElement('td');
+                    td.setAttribute('class', 'a1')
+                    tr.appendChild(td);
+                }
+
+            }
+        }
+
+
+
+        root.appendChild(tr);
+    }
+
+</script>
